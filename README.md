@@ -24,15 +24,6 @@
 - 예산, 사용 목적, 메인보드 메모리 규격, 파워 용량, 케이스 길이를 함께 고려한 호환 대체재 추천
 - OpenAI Responses API 기반 생성형 AI 분석 리포트
 
-## Gen AI 설정
-
-프로젝트 폴더에 `.env` 파일을 만들고 아래 값을 넣으면 AI 리포트가 실제 OpenAI API로 생성됩니다.
-
-```txt
-OPENAI_API_KEY=발급받은_API_KEY
-OPENAI_BASE_URL=https://factchat-cloud.mindlogic.ai/v1/gateway
-OPENAI_MODEL=gpt-5-mini
-```
 
 숙명여자대학교 API Gateway 키를 사용할 때는 `OPENAI_BASE_URL`을 함께 설정해야 합니다. `OPENAI_API_KEY`가 없거나 호출에 실패하면 앱은 로컬 규칙 기반 리포트로 자동 전환됩니다.
 
