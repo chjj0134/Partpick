@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PartPick</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div>
+          <strong>PartPick</strong>
+        </div>
+      </div>
+      <nav class="nav">
+        <button class="nav-item active" data-view="dashboard">대시보드</button>
+        <button class="nav-item" data-view="crawl">실시간 수집</button>
+        <button class="nav-item" data-view="recommend">호환 대체재</button>
+        <button class="nav-item" data-view="report">AI 리포트</button>
+      </nav>
+      <button id="refreshButton" class="primary-button top-action">새로 분석</button>
+    </aside>
+
+    <section class="content">
+      <section class="metrics">
+        <article>
+          <span>추적 상품</span>
+          <strong id="trackedCount">0</strong>
+        </article>
+        <article>
+          <span>평균 변동률</span>
+          <strong id="averageChange">0%</strong>
+        </article>
+        <article>
+          <span>구매 적기</span>
+          <strong id="bestBuyCount">0</strong>
+        </article>
+      </section>
+
+      <section id="dashboard" class="view active-view">
+        <section class="panel build-panel">
+          <div class="panel-head">
+            <h2>내 PC 사양</h2>
+            <span id="buildSummary">DDR5 · 600W · 300mm</span>
+          </div>
+          <div class="build-form">
+            <label>
+              메인보드 모델
+              <input id="motherboardInput" type="text" value="B650 DDR5 메인보드">
+            </label>
+            <label>
+              메모리 규격
+              <select id="dashboardMemoryTypeInput">
+                <option value="DDR5">DDR5</option>
+                <option value="DDR4">DDR4</option>
+              </select>
+            </label>
+            <label>
+              파워 용량
+              <select id="dashboardPsuInput">
+                <option value="500">500W</option>
+                <option value="600" selected>600W</option>
+                <option value="750">750W</option>
+                <option value="850">850W</option>
+                <option value="1000">1000W</option>
+                <option value="1200">1200W</option>
+              </select>
+            </label>
+            <label>
+              케이스 GPU 길이
+              <select id="dashboardCaseLengthInput">
+                <option value="250">250mm</option>
+                <option value="300" selected>300mm</option>
+                <option value="340">340mm</option>
+              </select>
+            </label>
+          </div>
+        </section>
+        <div class="grid two">
+          <section class="panel">
+            <div class="panel-head">
+              <h2>가격 추이</h2>
+              <select id="productSelect"></select>
+            </div>
+            <svg id="priceChart" viewBox="0 0 1400 320" role="img" aria-label="관심상품 가격 추이"></svg>
+          </section>
+          <section class="panel">
+            <div class="panel-head">
+              <h2>관심 상품</h2>
+              <span id="updatedAt"></span>
+            </div>
+            <div id="productList" class="product-list"></div>
+          </section>
+        </div>
+      </section>
+
+      <section id="crawl" class="view">
+        <section class="panel">
+          <div class="panel-head">
+            <h2>쇼핑몰 실시간 가격 수집</h2>
+            <span id="crawlSummary">다나와 · 컴퓨존 · 가이드컴 · 바이트몰 · 아이코다</span>
+          </div>
+          <div class="crawl-form">
+            <label>
+              검색어
+              <input id="crawlQueryInput" type="text" value="RTX 5070">
+            </label>
+            <label>
+              결과 수
+              <select id="crawlLimitInput">
+                <option value="3">3개</option>
+                <option value="5" selected>5개</option>
+                <option value="10">10개</option>
+              </select>
+            </label>
+            <button id="crawlButton" class="primary-button">가격 수집</button>
+          </div>
+          <div class="source-grid">
+            <label><input type="checkbox" class="sourceInput" value="danawa" checked> 다나와</label>
+            <label><input type="checkbox" class="sourceInput" value="compuzone" checked> 컴퓨존</label>
+            <label><input type="checkbox" class="sourceInput" value="guidecom" checked> 가이드컴</label>
+            <label><input type="checkbox" class="sourceInput" value="bytemall" checked> 바이트몰</label>
+            <label><input type="checkbox" class="sourceInput" value="icoda" checked> 아이코다</label>
+          </div>
+          <div id="crawlStatusList" class="crawl-status"></div>
+          <div id="crawlResultList" class="recommend-list"></div>
+        </section>
+      </section>
+
+      <section id="recommend" class="view">
+        <section class="panel">
+          <div class="panel-head">
+            <h2>호환성 기반 대체재 추천</h2>
+            <span id="recommendSummary"></span>
+          </div>
+          <div id="recommendList" class="recommend-list"></div>
+        </section>
+      </section>
+
+      <section id="report" class="view">
+        <section class="panel report-panel">
+          <div class="panel-head">
+            <h2>AI 분석 리포트</h2>
+            <span>관심상품 전체 기준</span>
+          </div>
+          <div id="reportOutput" class="report-output"></div>
+        </section>
+      </section>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
