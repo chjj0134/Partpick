@@ -1,0 +1,121 @@
+{
+  "catalog": [
+    {
+      "keyword": "RTX 5060",
+      "category": "GPU",
+      "series": "RTX 50",
+      "vram": "8GB GDDR7",
+      "recommendedPsu": 550,
+      "lengthMm": 240,
+      "pcie": "PCIe 5.0",
+      "score": 138,
+      "purpose": ["gaming", "balanced"]
+    },
+    {
+      "keyword": "RTX 5060 Ti",
+      "category": "GPU",
+      "series": "RTX 50",
+      "vram": "16GB GDDR7",
+      "recommendedPsu": 600,
+      "lengthMm": 270,
+      "pcie": "PCIe 5.0",
+      "score": 156,
+      "purpose": ["gaming", "work", "balanced"]
+    },
+    {
+      "keyword": "RTX 5070",
+      "category": "GPU",
+      "series": "RTX 50",
+      "vram": "12GB GDDR7",
+      "recommendedPsu": 650,
+      "lengthMm": 285,
+      "pcie": "PCIe 5.0",
+      "score": 218,
+      "purpose": ["gaming", "work"]
+    },
+    {
+      "keyword": "RTX 5070 Ti",
+      "category": "GPU",
+      "series": "RTX 50",
+      "vram": "16GB GDDR7",
+      "recommendedPsu": 750,
+      "lengthMm": 310,
+      "pcie": "PCIe 5.0",
+      "score": 258,
+      "purpose": ["gaming", "work"]
+    },
+    {
+      "keyword": "RTX 5080",
+      "category": "GPU",
+      "series": "RTX 50",
+      "vram": "16GB GDDR7",
+      "recommendedPsu": 850,
+      "lengthMm": 330,
+      "pcie": "PCIe 5.0",
+      "score": 328,
+      "purpose": ["gaming", "work"]
+    },
+    {
+      "keyword": "RTX 5090",
+      "category": "GPU",
+      "series": "RTX 50",
+      "vram": "32GB GDDR7",
+      "recommendedPsu": 1000,
+      "lengthMm": 340,
+      "pcie": "PCIe 5.0",
+      "score": 430,
+      "purpose": ["gaming", "work"]
+    },
+    {
+      "keyword": "RTX 4060",
+      "category": "GPU",
+      "series": "RTX 40",
+      "vram": "8GB",
+      "recommendedPsu": 550,
+      "lengthMm": 245,
+      "pcie": "PCIe 4.0 x8",
+      "score": 109,
+      "purpose": ["gaming", "balanced"]
+    },
+    {
+      "keyword": "RTX 4070",
+      "category": "GPU",
+      "series": "RTX 40",
+      "vram": "12GB",
+      "recommendedPsu": 650,
+      "lengthMm": 300,
+      "pcie": "PCIe 4.0 x16",
+      "score": 184,
+      "purpose": ["gaming", "work"]
+    },
+    {
+      "keyword": "RX 7600",
+      "category": "GPU",
+      "series": "Radeon RX 7000",
+      "vram": "8GB",
+      "recommendedPsu": 550,
+      "lengthMm": 240,
+      "pcie": "PCIe 4.0 x8",
+      "score": 103,
+      "purpose": ["gaming", "balanced"]
+    },
+    {
+      "keyword": "DDR5",
+      "category": "RAM",
+      "memoryType": "DDR5",
+      "capacityGb": 32,
+      "speed": 5600,
+      "score": 88,
+      "purpose": ["work", "balanced"]
+    },
+    {
+      "keyword": "DDR4",
+      "category": "RAM",
+      "memoryType": "DDR4",
+      "capacityGb": 32,
+      "speed": 3200,
+      "score": 69,
+      "purpose": ["gaming", "balanced"]
+    }
+  ]
+}
