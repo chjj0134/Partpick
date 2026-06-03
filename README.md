@@ -25,8 +25,6 @@
 - OpenAI Responses API 기반 생성형 AI 분석 리포트
 
 
-숙명여자대학교 API Gateway 키를 사용할 때는 `OPENAI_BASE_URL`을 함께 설정해야 합니다. `OPENAI_API_KEY`가 없거나 호출에 실패하면 앱은 로컬 규칙 기반 리포트로 자동 전환됩니다.
-
 ## API
 
 - `GET /api/watchlist`
