@@ -1,9 +1,5 @@
 # PartPick
 
-## 실행 방법
-
-`start.bat` 파일을 실행한 뒤 브라우저에서 `http://localhost:3000`을 열면 됩니다.
-
 ## 구성
 
 - `index.html`: 화면 구조
